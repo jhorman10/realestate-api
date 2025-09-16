@@ -91,8 +91,8 @@ git push -u origin main
 
 ## 🔗 Enlaces útiles
 
-- **API Local**: https://localhost:7165
-- **Swagger UI**: https://localhost:7165/swagger
+- **API Local**: http://localhost:5126
+- **Swagger UI**: http://localhost:5126/swagger
 - **Documentación API**: [API_DOCUMENTATION.md](./API_DOCUMENTATION.md)
 - **Guía de contribución**: [CONTRIBUTING.md](./CONTRIBUTING.md)
 

@@ -80,8 +80,8 @@ restore() {
 run() {
     print_status "Starting RealEstate API..."
     check_mongodb || exit 1
-    print_status "Starting API on https://localhost:7165"
-    print_status "Swagger UI available at: https://localhost:7165/swagger"
+    print_status "Starting API on http://localhost:5126"
+    print_status "Swagger UI available at: http://localhost:5126/swagger"
     dotnet run --project src/RealEstate.Api
 }
 
@@ -89,8 +89,8 @@ run() {
 dev() {
     print_status "Starting RealEstate API in development mode with hot reload..."
     check_mongodb || exit 1
-    print_status "Starting API on https://localhost:7165"
-    print_status "Swagger UI available at: https://localhost:7165/swagger"
+    print_status "Starting API on http://localhost:5126"
+    print_status "Swagger UI available at: http://localhost:5126/swagger"
     print_status "Hot reload enabled - changes will be automatically reloaded"
     dotnet watch --project src/RealEstate.Api
 }

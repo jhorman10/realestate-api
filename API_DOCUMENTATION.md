@@ -116,8 +116,8 @@ This document provides comprehensive technical information about the RealEstate 
 ## 🚀 API Endpoints Documentation
 
 ### Base URL
-- **Development**: `https://localhost:5001/api`
-- **Swagger UI**: `https://localhost:5001`
+- **Development**: `http://localhost:5126/api`
+- **Swagger UI**: `http://localhost:5126/swagger`
 
 ### Authentication
 - Currently no authentication required

@@ -111,8 +111,8 @@ dotnet run --project src/RealEstate.Api
 ```
 
 The API will be available at:
-- **Swagger UI**: https://localhost:5001 (or http://localhost:5000)
-- **API Base URL**: https://localhost:5001/api
+- **Swagger UI**: http://localhost:5126/swagger (or https://localhost:7262/swagger)
+- **API Base URL**: http://localhost:5126/api (or https://localhost:7262/api)
 
 ## 📖 API Documentation
 
