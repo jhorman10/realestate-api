@@ -1,6 +1,54 @@
 @RealEstate.Api_HostAddress = http://localhost:5126
 
-GET {{RealEstate.Api_HostAddress}}/weatherforecast/
+# Get all properties
+GET {{RealEstate.Api_HostAddress}}/api/Properties
 Accept: application/json
+
+###
+
+# Get properties with filters
+GET {{RealEstate.Api_HostAddress}}/api/Properties?minPrice=100000&maxPrice=500000
+Accept: application/json
+
+###
+
+# Get property by ID (replace with actual ID after creating)
+GET {{RealEstate.Api_HostAddress}}/api/Properties/507f1f77bcf86cd799439011
+Accept: application/json
+
+###
+
+# Create a new property
+POST {{RealEstate.Api_HostAddress}}/api/Properties
+Content-Type: application/json
+
+{
+  "name": "Beautiful Test House",
+  "address": "123 Main Street, Test City, CA 90210",
+  "price": 450000,
+  "codeInternal": "TEST-001",
+  "year": 2022,
+  "ownerName": "John Test Owner"
+}
+
+###
+
+# Update a property (replace with actual ID)
+PUT {{RealEstate.Api_HostAddress}}/api/Properties/507f1f77bcf86cd799439011
+Content-Type: application/json
+
+{
+  "name": "Updated Beautiful House",
+  "address": "123 Main Street, Test City, CA 90210",
+  "price": 475000,
+  "codeInternal": "TEST-001-UPD",
+  "year": 2022,
+  "ownerName": "John Updated Owner"
+}
+
+###
+
+# Delete a property (replace with actual ID)
+DELETE {{RealEstate.Api_HostAddress}}/api/Properties/507f1f77bcf86cd799439011
 
 ###
