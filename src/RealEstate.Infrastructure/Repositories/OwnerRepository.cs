@@ -1,4 +1,5 @@
 using MongoDB.Driver;
+using MongoDB.Bson;
 using RealEstate.Domain.Entities;
 using RealEstate.Domain.Interfaces;
 
@@ -20,6 +21,12 @@ public class OwnerRepository : BaseRepository<Owner>, IOwnerRepository
 
     public async Task<Owner?> GetOwnerByIdAsync(string id, CancellationToken ct = default)
     {
+        // First validate if the id is a valid ObjectId
+        if (!ObjectId.TryParse(id, out _))
+        {
+            return null;
+        }
+
         return await Collection
             .Find(o => o.Id == id)
             .FirstOrDefaultAsync(ct);
@@ -55,6 +62,12 @@ public class OwnerRepository : BaseRepository<Owner>, IOwnerRepository
 
     public async Task<bool> OwnerExistsAsync(string id, CancellationToken ct = default)
     {
+        // First validate if the id is a valid ObjectId
+        if (!ObjectId.TryParse(id, out _))
+        {
+            return false;
+        }
+
         var count = await Collection.CountDocumentsAsync(o => o.Id == id, cancellationToken: ct);
         return count > 0;
     }

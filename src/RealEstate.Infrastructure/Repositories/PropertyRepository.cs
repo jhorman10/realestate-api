@@ -1,4 +1,5 @@
 using MongoDB.Driver;
+using MongoDB.Bson;
 using RealEstate.Domain.Entities;
 using RealEstate.Domain.Interfaces;
 
@@ -34,7 +35,13 @@ public class PropertyRepository : BaseRepository<Property>, IPropertyRepository
             filters.Add(filterBuilder.Lte(p => p.Price, filter.PriceMax.Value));
 
         if (!string.IsNullOrWhiteSpace(filter.OwnerId))
-            filters.Add(filterBuilder.Eq(p => p.OwnerId, filter.OwnerId));
+        {
+            // Only add filter if OwnerId is a valid ObjectId
+            if (ObjectId.TryParse(filter.OwnerId, out _))
+            {
+                filters.Add(filterBuilder.Eq(p => p.OwnerId, filter.OwnerId));
+            }
+        }
 
         if (filter.Year.HasValue)
             filters.Add(filterBuilder.Eq(p => p.Year, filter.Year.Value));
@@ -77,6 +84,12 @@ public class PropertyRepository : BaseRepository<Property>, IPropertyRepository
 
     public async Task<Property?> GetPropertyByIdAsync(string id, CancellationToken ct = default)
     {
+        // First validate if the id is a valid ObjectId
+        if (!ObjectId.TryParse(id, out _))
+        {
+            return null;
+        }
+
         var property = await Collection
             .Find(p => p.Id == id && p.Enabled)
             .FirstOrDefaultAsync(ct);
@@ -136,6 +149,12 @@ public class PropertyRepository : BaseRepository<Property>, IPropertyRepository
 
     public async Task<bool> PropertyExistsAsync(string id, CancellationToken ct = default)
     {
+        // First validate if the id is a valid ObjectId
+        if (!ObjectId.TryParse(id, out _))
+        {
+            return false;
+        }
+
         var count = await Collection.CountDocumentsAsync(p => p.Id == id && p.Enabled, cancellationToken: ct);
         return count > 0;
     }

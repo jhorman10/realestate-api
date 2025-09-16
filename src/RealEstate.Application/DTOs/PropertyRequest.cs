@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using RealEstate.Application.Attributes;
 
 namespace RealEstate.Application.DTOs;
 
@@ -25,6 +26,7 @@ public class CreatePropertyRequest
     public int Year { get; set; }
     
     [Required]
+    [ObjectId(ErrorMessage = "OwnerId must be a valid ObjectId")]
     public string OwnerId { get; set; } = string.Empty;
 }
 
@@ -51,6 +53,7 @@ public class UpdatePropertyRequest
     public int Year { get; set; }
     
     [Required]
+    [ObjectId(ErrorMessage = "OwnerId must be a valid ObjectId")]
     public string OwnerId { get; set; } = string.Empty;
     
     public bool Enabled { get; set; } = true;
