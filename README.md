@@ -256,4 +256,30 @@ For questions or issues, please contact the development team or create an issue 
 
 ---
 
-**Built with ❤️ for real estate management**
+## 👨‍💻 Autor
+
+<div align="center">
+
+### **Jhorman Orozco**
+*Full Stack Developer & React Specialist*
+
+[![GitHub](https://img.shields.io/badge/GitHub-@jhorman10-181717?style=for-the-badge&logo=github)](https://github.com/jhorman10)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-jhorman--orozco-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/jhorman-orozco)
+[![Email](https://img.shields.io/badge/Email-jsojhor@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jsojhor@gmail.com)
+
+</div>
+
+---
+
+<div align="center">
+
+### 🏠 **Real Estate Frontend**
+*Construido con ❤️ y las mejores prácticas de React*
+
+[![Stars](https://img.shields.io/github/stars/jhorman10/realestate-front?style=social)](https://github.com/jhorman10/realestate-front/stargazers)
+[![Forks](https://img.shields.io/github/forks/jhorman10/realestate-front?style=social)](https://github.com/jhorman10/realestate-front/network/members)
+[![Issues](https://img.shields.io/github/issues/jhorman10/realestate-front)](https://github.com/jhorman10/realestate-front/issues)
+
+**[⭐ Star](https://github.com/jhorman10/realestate-front) • [🐛 Report Bug](https://github.com/jhorman10/realestate-front/issues) • [💡 Request Feature](https://github.com/jhorman10/realestate-front/issues)**
+
+</div>
