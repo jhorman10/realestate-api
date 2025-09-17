@@ -274,7 +274,7 @@ For questions or issues, please contact the development team or create an issue 
 <div align="center">
 
 ### 🏠 **Real Estate Frontend**
-*Construido con ❤️ y las mejores prácticas de React*
+*Construido con ❤️ y las mejores prácticas de .NET y C#*
 
 [![Stars](https://img.shields.io/github/stars/jhorman10/realestate-front?style=social)](https://github.com/jhorman10/realestate-front/stargazers)
 [![Forks](https://img.shields.io/github/forks/jhorman10/realestate-front?style=social)](https://github.com/jhorman10/realestate-front/network/members)
